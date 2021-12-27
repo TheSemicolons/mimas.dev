@@ -3,7 +3,7 @@
 	font-family: "Noto Mono";
 	src:
 		local("Noto Mono"),
-		url("../font/NotoMono-Regular.ttf") format("truetype");
+		url("/font/NotoMono-Regular.ttf") format("truetype");
 }
 
 @font-face
@@ -11,7 +11,7 @@
 	font-family: "Noto Sans";
 	src:
 		local("Noto Sans"),
-		url("../font/NotoSans-Regular.ttf") format("truetype");
+		url("/font/NotoSans-Regular.ttf") format("truetype");
 }
 
 @font-face
@@ -19,5 +19,5 @@
 	font-family: "Noto Serif";
 	src:
 		local("Noto Serif"),
-		url("../font/NotoSerif-Regular.ttf") format("truetype");
+		url("/font/NotoSerif-Regular.ttf") format("truetype");
 }

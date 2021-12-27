@@ -1,7 +1,9 @@
 html, body
 {
-	background-color: #FDF6E3; /* Primary Background */
-	color: #657B83; /* Primary Content */
+	/* background-color: #FDF6E3; Primary Background */
+	/* color: #657B83; Primary Content */
+	background-color: var(--bg);
+	color: var(--content);
 }
 
 body
@@ -17,7 +19,8 @@ body
 a:active, a:link, a:visited
 {
 	background-color: inherit;
-	color: #268BD2; /* Blue */
+	/* color: #268BD2; Blue */
+	color: var(--blue);
 	font-weight: bold;
 	text-decoration: none;
 }
@@ -25,20 +28,23 @@ a:active, a:link, a:visited
 a:hover
 {
 	background-color: inherit;
-	color: #B58900; /* Yellow */
+	/* color: #B58900; Yellow */
+	color: var(--yellow);
 	text-decoration: underline;
 }
 
-body > header
+header
 {
 	align-self: stretch;
-	background-color: #EEE8D5; /* Primary Highlight */
-	color: #93A1A1; /* Primary Subdue */
+	/* background-color: #EEE8D5; Primary Highlight */
+	/* color: #93A1A1; Primary Subdue */
+	background-color: var(--hl);
+	color: var(--secondary);
 	flex: 0 1 auto;
 	order: 0;
 }
 
-body > header > h1
+header > h1
 {
 	display: inline;
 	font-size: 2.5em;
@@ -46,24 +52,28 @@ body > header > h1
 	margin: 0;
 	padding: 0 5px;
 }
-body > header > h2
+
+header > h2
 {
 	display: inline;
 	margin: 0;
 	padding: 0 .5em;
 }
 
-body > nav
+nav
 {
 	align-self: stretch;
-	background-color: #EEE8D5; /* Primary Highlight */
-	border-bottom: 1px solid #002B36; /* Compliment Background */
-	color: #657B83; /* Primary Content */
+	/* color: #657B83; Primary Content */
+	/* background-color: #EEE8D5; Primary Highlight */
+	/* border-bottom: 1px solid #002B36; Compliment Background */
+	background-color: var(--hl);
+	border-bottom: 1px solid var(--cbg);
+	color: var(--content);
 	flex: 0 1 auto;
 	order: 1;
 }
 
-body > main
+main
 {
 	align-self: stretch;
 	flex: 1 1 auto;
@@ -72,34 +82,27 @@ body > main
 	padding: 0 5px;
 }
 
-body > main > section
-{
-	overflow: auto;
-}
-
-body > main > section > p
-{
-	padding-left: 5px;
-}
-
-body > footer
+footer
 {
 	align-self: stretch;
-	background-color: #EEE8D5; /* Primary Highlight */
-	border-top: 1px solid #002B36; /* Compliment Background */
-	color: #586E75; /* Primary Optional */
+	/* background-color: #EEE8D5; Primary Highlight */
+	/* border-top: 1px solid #002B36; Compliment Background */
+	/* color: #586E75; Primary Optional */
+	background-color: var(--hl);
+	border-bottom: 1px solid var(--cbg);
+	color: var(--optional);
 	flex: 0 1 auto;
 	order: 3;
 }
 
-body > footer > p
+footer > p
 {
 	margin: 0;
 	padding: 0;
 	text-align: center;
 }
 
-body > footer > ul
+footer > ul
 {
 	align-content: center;
 	align-items: center;
@@ -112,16 +115,17 @@ body > footer > ul
 	padding: 0;
 }
 
-body > footer > ul > li
+footer > ul > li
 {
 	align-self: auto;
 	flex: 0 1 auto;
 	padding: 0 5px;
 }
 
-body > footer > ul > li+li
+footer > ul > li+li
 {
-	border-left: 1px solid #586E75; /* Primary Optional */
+	/* border-left: 1px solid #586E75; Primary Optional */
+	border-left: 1px solid var(--optional);
 }
 
 
@@ -140,16 +144,23 @@ body > footer > ul > li+li
 	margin: 0;
 	padding: 0;
 }
+
 .swatches > ul > li
 {
 	align-self: auto;
-	border: 1px solid black;
-	flex: 1 0 20%;
-	height: 50px;
+	/* background-color: #EEE8D5; Primary Highlight */
+	/* border: 1px solid #002B36; Compliment Background */
+	/* color: #657B83; Primary Content */
+	background-color: var(--hl);
+	border: 1px solid var(--cbg);
+	color: var(--content);
+	flex: 0 1 20%;
+	height: 25px;
+	line-height: 25px;
 	margin: 25px;
 	text-align: center;
-	width: 250px;
 }
+
 
 /**
  * Colours.
@@ -157,49 +168,57 @@ body > footer > ul > li+li
 .blue
 {
 	background-color: inherit;
-	color: #268BD2; /* Blue */
+	/* color: #268BD2; Blue */
+	color: var(--blue);
 }
 
 .cyan
 {
 	background-color: inherit;
-	color: #2AA198; /* Cyan */
+	/* color: #2AA198; Cyan */
+	color: var(--cyan);
 }
 
 .green
 {
 	background-color: inherit;
-	color: #859900; /* Green */
+	/* color: #859900; Green */
+	color: var(--green);
 }
 
 .magenta
 {
 	background-color: inherit;
-	color: #D33682; /* Magenta */
+	/* color: #D33682; Magenta */
+	color: var(--magenta);
 }
 
 .orange
 {
 	background-color: inherit;
-	color: #CB4B16; /* Orange */
+	/* color: #CB4B16; Orange */
+	color: var(--orange);
 }
 
 .red
 {
 	background-color: inherit;
-	color: #DC322F; /* Red */
+	/* color: #DC322F; Red */
+	color: var(--red);
 }
 
 .violet
 {
 	background-color: inherit;
-	color: #6C71C4; /* Violet */
+	/* color: #6C71C4; Violet */
+	color: var(--violet);
 }
 
 .yellow
 {
 	background-color: inherit;
-	color: #B58900; /* Yellow */
+	/* color: #B58900; Yellow */
+	color: var(--yellow);
 }
 
 
@@ -229,26 +248,30 @@ body > footer > ul > li+li
 .caption
 {
 	background-color: inherit;
-	color: #93A1A1; /* Primary Subdue */
+	/*color: #93A1A1; Primary Subdue */
+	color: var(--secondary);
 	font-size: small;
 }
 
 .subdued
 {
 	background-color: inherit;
-	color: #93A1A1; /* Primary Subdue */
+	/*color: #93A1A1; Primary Subdue */
+	color: var(--secondary);
 }
 
 .error
 {
 	background-color: inherit;
-	color: #DC322F; /* Red */
+	/* color: #DC322F; Red */
+	color: var(--red);
 }
 
 .success
 {
 	background-color: inherit;
-	color: #859900; /* Green */
+	/* color: #859900; Green */
+	color: var(--green);
 }
 
 
@@ -257,9 +280,12 @@ body > footer > ul > li+li
  */
 .featurebox > ul
 {
-	background-color: #EEE8D5; /* Primary Highlight */
-	border: 1px solid #002B36; /* Compliment Background */
-	color: #657B83; /* Primary Content */
+	/* background-color: #EEE8D5; Primary Highlight */
+	/* border: 1px solid #002B36; Compliment Background */
+	/* color: #657B83; Primary Content */
+	background-color: var(--hl);
+	border: 1px solid var(--cbg);
+	color: var(--content);
 	list-style-type: none;
 	margin: 0 0 1.5em;
 	padding: 15px 20px 20px;
@@ -267,9 +293,12 @@ body > footer > ul > li+li
 
 .featurebox > ul > li:first-child h3
 {
-	background-color: #EEE8D5; /* Primary Highlight */
-	border-bottom: 1px solid #DC322F; /* Red */
-	color: #DC322F; /* Red */
+	/* background-color: #EEE8D5; Primary Highlight */
+	/* border-bottom: 1px solid #DC322F; Red */
+	/* color: #DC322F; Red */
+	background-color: var(--hl);
+	border-bottom: 1px solid var(--red);
+	color: var(--red);
 	margin: 0 0 .3em;
 }
 
@@ -300,9 +329,12 @@ body > footer > ul > li+li
 {
 	align-content: center;
 	align-items: center;
-	background-color: #EEE8D5; /* Primary Highlight */
-	border: 1px solid #002B36; /* Compliment Background */
-	color: #657B83; /* Primary Content */
+	/* background-color: #EEE8D5; Primary Highlight */
+	/* border: 1px solid #002B36; Compliment Background */
+	/* color: #657B83; Primary Content */
+	background-color: var(--hl);
+	border: 1px solid var(--cbg);
+	color: var(--content);
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -320,7 +352,8 @@ body > footer > ul > li+li
 
 .pagination > ul > li > a
 {
-	border: 1px solid #002B36; /* Compliment Background */
+	/* border: 1px solid #002B36; Compliment Background */
+	border: 1px solid var(--cbg);
 	margin: 5px;
 	padding: 2px 5px;
 	text-decoration: none;
@@ -329,21 +362,28 @@ body > footer > ul > li+li
 .pagination > ul > li > a:active, .pagination > ul > li > a:link,
 .pagination > ul > li > a:visited
 {
-	background-color: #FDF6E3; /* Primary Background */
-	color: #268BD2; /* Blue */
+	/* background-color: #FDF6E3; Primary Background */
+	/* color: #268BD2; Blue */
+	background-color: var(--bg);
+	color: var(--blue);
 }
 
 .pagination > ul > li > a:hover
 {
-	background-color: #268BD2; /* Blue */
-	color: #FDF6E3; /* Primary Background */
+	/* background-color: #268BD2; Blue */
+	/* color: #FDF6E3; Primary Background */
+	background-color: var(--blue);
+	color: var(--bg);
 }
 
 .pagination > ul > li > span
 {
-	background-color: #FDF6E3; /* Primary Background */
-	border: 1px solid #002B36; /* Compliment Background */
-	color: #93A1A1; /* Primary Subdue */
+	/* background-color: #FDF6E3; Primary Background */
+	/* border: 1px solid #002B36; Compliment Background */
+	/* color: #93A1A1; Primary Subdue */
+	background-color: var(--bg);
+	border: 1px solid var(--cbg);
+	color: var(--secondary);
 	font-weight: bold;
 	margin: 5px;
 	padding: 2px 5px;
@@ -354,63 +394,62 @@ body > footer > ul > li+li
 /**
  * Article List.
  */
-.postList
+article
 {
-	background-color: #EEE8D5; /* Primary Highlight */
-	border: 1px solid #002B36; /* Compliment Background */
-	color: #657B83; /* Primary Content */
+	/* background-color: #EEE8D5; Primary Highlight */
+	/* border: 1px solid #002B36; Compliment Background */
+	/* color: #657B83; Primary Content */
+	background-color: var(--hl);
+	border: 1px solid var(--cbg);
+	color: var(--primary);
 	margin: 1.0em 0;
 	padding: 15px;
 }
 	
-.postList > h2
+article > h2
 {
 	background-color: inherit;
-	border-bottom: 1px solid #93A1A1;
-	color: #657B83; /* Primary Content */
+	/* border-bottom: 1px solid #93A1A1; Primary Subdue */
+	/* color: #657B83; Primary Content */
+	border-bottom: 1px solid var(--secondary);
+	color: var(--primary);
 	font-weight: bold;
 	margin: 0;
 	padding: 0;
 }
 
-.postList > ul
+article > p
+{
+	padding-left: 5px;
+	max-width: 50em;
+}
+
+article > ul
 {
 	background-color: inherit;
 	color: inherit;
-	list-style-type: none;
 	margin: 0;
 	padding: 0;
 }
 
-.postList > ul > li
+article > ul > li
 {
-	background-color: #EEE8D5; /* Primary Highlight */
+	/* background-color: #EEE8D5; Primary Highlight */
+	background-color: var(--hl);
 	border: none;
-	color: #657B83; /* Primary Content */
+	/* color: #657B83; Primary Content */
+	color: var(--primary);
 	font-weight: normal;
 	line-height: 1.3;
-	margin: 0 0 .3em;
+	margin: 0 2em .3em;
 }
 
-.postList > ul > li > p > img
-{
-	width: 50%;
-}
-
-.postList > ul > li > ul > .tag, .postList > ul > li > ul > .date
-{
-	background-color: inherit;
-	border: none;
-	color: #93A1A1; /* Primary Subdue */
-	display: inline;
-	margin: 0;
-}
-
-.postList > ul > li > ul
+.postDetails
 {
 	align-content: flex-start;
 	align-items: flex-start;
-	border-top: 1px solid #93A1A1;
+	/* border-top: 1px solid #93A1A1; Primary Subdue */
+	border-top: 1px solid var(--secondary);
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -420,15 +459,33 @@ body > footer > ul > li+li
 	padding: 0;
 }
 
-.postList > ul > li > ul > li:last-child
+.postDetails > li
+{
+	margin: 0;
+}
+
+.postDetails > .tag, .postDetails > .date
+{
+	background-color: inherit;
+	border: none;
+	/* color: #93A1A1; Primary Subdue */
+	color: var(--secondary);
+	display: inline;
+	margin: 0;
+	list-style-type: none;
+}
+
+
+.postDetails > li:last-child
 {
 	margin-left: auto;
 }
 
-.postList > ul > li > ul > .tag > a
+.postDetails > .tag > a
 {
 	background-color: inherit;
-	color: #268BD2; /* Blue */
+	/* color: #268BD2; Blue */
+	color: var(--blue);
 	padding: 0px 5px;
 	text-decoration: none;
 	white-space: nowrap;
@@ -437,10 +494,11 @@ body > footer > ul > li+li
 	order: 0;
 }
 
-.postList > ul > li > ul > .tag > a:hover
+.postDetails > .tag > a:hover
 {
 	background-color: inherit;
-	color: #B58900; /* Yellow */
+	/* color: #B58900; Yellow */
+	color: var(--yellow);
 	text-decoration: underline;
 }
 
@@ -460,7 +518,8 @@ body > footer > ul > li+li
 .tagList > ul > li > a
 {
 	background-color: inherit;
-	color: #268BD2; /* Blue */
+	/* color: #268BD2; Blue */
+	color: var(--blue);
 	padding: 0px 5px;
 	text-decoration: none;
 	white-space: nowrap;
@@ -472,28 +531,36 @@ body > footer > ul > li+li
 .tagList > ul > li > a:hover
 {
 	background-color: inherit;
-	color: #B58900; /* Yellow */
+	/* color: #B58900; Yellow */
+	color: var(--yellow);
 	text-decoration: underline;
 }
+
 
 /**
  * Tables.
  */
-main > table
+table
 {
 	border-collapse: collapse;
 	margin: 0 0 1.5em;
 	width: 100%;
 }
 
-main > table > thead > tr > th
+table > thead > tr > th
 {
-	background-color: #EEE8D5; /* Primary Highlight */
-	border-bottom: 2px solid #073642; /* Compliment Highlight */
-	border-left: 1px solid #073642; /* Compliment Highlight */
-	border-right: 1px solid #073642; /* Compliment Highlight */
-	border-top: 2px solid #073642; /* Compliment Highlight */
-	color: #657B83; /* Primary Content */
+	/* background-color: #EEE8D5; Primary Highlight */
+	/* border-bottom: 2px solid #073642; Compliment Highlight */
+	/* border-left: 1px solid #073642; Compliment Highlight */
+	/* border-right: 1px solid #073642; Compliment Highlight */
+	/* border-top: 2px solid #073642; Compliment Highlight */
+	/* color: #657B83; Primary Content */
+	background-color: var(--hl);
+	border-bottom: 2px solid var(--cbg);
+	border-left: 1px solid var(--cbg);
+	border-right: 1px solid var(--cbg);
+	border-top: 2px solid var(--cbg);
+	color: var(--primary);
 	font-size: 1em;
 	font-weight: bold;
 	padding: 6px;
@@ -501,11 +568,12 @@ main > table > thead > tr > th
 	width: 20%;
 }
 
-main > table > tbody > tr > td
+table > tbody > tr > td
 {
-	background-color: inherit;
-	border: 1px solid #FDF6E3; /* Primary Background */
-	border: 1px solid #073642; /* Compliment Highlight */
+	/* background-color: #FDF6E3; Primary Background */
+	/* border: 1px solid #073642; Compliment Highlight */
+	background-color: var(--bg);
+	border: 1px solid var(--cbg);
 	color: inherit;
 	padding: 3px;
 }
@@ -522,7 +590,7 @@ main > table > tbody > tr > td
 }
 
 .calendar > thead > tr > th
-{ 
+{
 	padding: 3px 2px;
 	text-align: center;
 }
@@ -535,7 +603,8 @@ main > table > tbody > tr > td
 
 .calendar > tbody > tr > td
 {
-	border: 1px solid #002B36; /* Compliment Background */
+	/* border: 1px solid #002B36; Compliment Background */
+	border: 1px solid var(--cbg);
 }
 
 
@@ -544,8 +613,10 @@ main > table > tbody > tr > td
  */
 .submission > form
 {
-	background-color: #FDF6E3; /* Primary Background */
-	color: #657B83; /* Primary Content */
+	/* background-color: #FDF6E3; Primary Background */
+	/* color: #657B83; Primary Content */
+	background-color: var(--bg);
+	color: var(--primary);
 	margin: 0 0 1.5em;
 	width: 500px;
 }
@@ -553,7 +624,8 @@ main > table > tbody > tr > td
 .submission > form em
 {
 	background-color: inherit;
-	color: #DC322F; /* Red */
+	/* color: #DC322F; Red */
+	color: var(--red);
 	font-style: normal;
 	font-weight: bold;
 }
@@ -565,8 +637,10 @@ main > table > tbody > tr > td
 
 .submission > form > fieldset
 {
-	background-color: #EEE8D5; /* Primary Highlight */
-	border: 1px solid #002B36; /* Compliment Background */
+	/* background-color: #EEE8D5; Primary Highlight */
+	/* border: 1px solid #002B36; Compliment Background */
+	background-color: var(--hl);
+	border: 1px solid var(--cbg);
 	color: inherit;
 	margin-bottom: 10px;
 }
@@ -574,7 +648,8 @@ main > table > tbody > tr > td
 .submission > form > fieldset > legend
 {
 	background-color: transparent;
-	color: #DC322F; /* Red */
+	/* color: #DC322F; Red */
+	color: var(--red);
 	font-weight: bold;
 	padding: 0 2px;
 }
@@ -594,13 +669,15 @@ main > table > tbody > tr > td
 
 .submission > form > fieldset > ul > li:not(:last-child)
 {
-	border-bottom: 1px solid #002B36; /* Compliment Background */
+	/* border-bottom: 1px solid #002B36; Compliment Background */
+	border-bottom: 1px solid var(--cbg);
 }
 
 .submission > form > fieldset > ul > li > label
 {
 	background-color: inherit;
-	color: #657B83; /* Primary Content */
+	/* color: #657B83; Primary Content */
+	color: var(--primary);
 	display: inline-block;
 	line-height: 1.8;
 	vertical-align: top;
