@@ -1,5 +1,5 @@
 #
-# Copyright (c) 2021 James Anderson <thesemicolons@protonmail.com>
+# Copyright (c) 2022 James Anderson <thesemicolons@protonmail.com>
 #
 # Permission to use, copy, modify, and distribute this software for any purpose
 # with or without fee is hereby granted, provided that the above copyright
@@ -22,4 +22,4 @@ VERSION   = 0.1
 all: install
 
 install:
-	rsync -ahv --delete public/ web0.mimas.dev:/home/www/htdocs/mimas.dev
+	openrsync -av --delete public/ web0.mimas.dev:/home/www/htdocs/mimas.dev

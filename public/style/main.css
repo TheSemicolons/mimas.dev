@@ -1,9 +1,7 @@
 html, body
 {
-	/* background-color: #FDF6E3; Primary Background */
-	/* color: #657B83; Primary Content */
-	background-color: var(--bg);
-	color: var(--content);
+	background-color: var(--bg); /* Primary Background */
+	color: var(--content); /* Primary Content */
 }
 
 body
@@ -19,8 +17,7 @@ body
 a:active, a:link, a:visited
 {
 	background-color: inherit;
-	/* color: #268BD2; Blue */
-	color: var(--blue);
+	color: var(--blue); /* Blue */
 	font-weight: bold;
 	text-decoration: none;
 }
@@ -28,18 +25,16 @@ a:active, a:link, a:visited
 a:hover
 {
 	background-color: inherit;
-	/* color: #B58900; Yellow */
-	color: var(--yellow);
+	color: var(--yellow); /* Yellow */
 	text-decoration: underline;
 }
 
 header
 {
 	align-self: stretch;
-	/* background-color: #EEE8D5; Primary Highlight */
-	/* color: #93A1A1; Primary Subdue */
-	background-color: var(--hl);
-	color: var(--secondary);
+	background-color: var(--hl); /* Primary Highlight */
+	/*color: var(--secondary);*/ /* Primary Subdue */
+	color: var(--optional); /* Primary Subdue */
 	flex: 0 1 auto;
 	order: 0;
 }
@@ -63,12 +58,9 @@ header > h2
 nav
 {
 	align-self: stretch;
-	/* color: #657B83; Primary Content */
-	/* background-color: #EEE8D5; Primary Highlight */
-	/* border-bottom: 1px solid #002B36; Compliment Background */
-	background-color: var(--hl);
-	border-bottom: 1px solid var(--cbg);
-	color: var(--content);
+	background-color: var(--hl); /* Primary Content */
+	border-bottom: 1px solid var(--cbg); /* Primary Highlight */
+	color: var(--content); /* Compliment Background */
 	flex: 0 1 auto;
 	order: 1;
 }
@@ -85,12 +77,9 @@ main
 footer
 {
 	align-self: stretch;
-	/* background-color: #EEE8D5; Primary Highlight */
-	/* border-top: 1px solid #002B36; Compliment Background */
-	/* color: #586E75; Primary Optional */
-	background-color: var(--hl);
-	border-bottom: 1px solid var(--cbg);
-	color: var(--optional);
+	background-color: var(--hl); /* Primary Highlight */
+	border-top: 1px solid var(--cbg); /* Compliment Background */
+	color: var(--optional); /* Primary Optional */
 	flex: 0 1 auto;
 	order: 3;
 }
@@ -124,8 +113,7 @@ footer > ul > li
 
 footer > ul > li+li
 {
-	/* border-left: 1px solid #586E75; Primary Optional */
-	border-left: 1px solid var(--optional);
+	border-left: 1px solid var(--optional); /* Primary Optional */
 }
 
 

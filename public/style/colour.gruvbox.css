@@ -1,0 +1,75 @@
+:root {
+	--blue: rgba(70, 135, 135, 1.0);
+	--cyan: rgba(105, 160, 105, 1.0);
+	--green: rgba(150, 150, 25, 1.0);
+	--magenta: rgba(210, 55, 130, 1.0);
+	--orange: rgba(215, 95, 15, 1.0);
+	--red: rgba(205, 35, 30, 1.0);
+	--violet: rgba(180, 100, 135, 1.0);
+	--yellow: rgba(215, 155, 35, 1.0);
+
+	--base0: rgba(145, 130, 115, 1.0);
+	--base1: rgba(170, 155, 130, 1.0);
+	--base2: rgba(215, 195, 160, 1.0);
+	--base3: rgba(250, 240, 200, 1.0);
+	--base00: rgba(145, 130, 115, 1.0);
+	--base01: rgba( 124, 110, 100, 1.0);
+	--base02: rgba( 80, 75, 70, 1.0);
+	--base03: rgba( 40, 40, 40, 1.0);
+
+	--bg: var(--base3);
+	--hl: var(--base2);
+	--primary: var(--base00);
+	--secondary: var(--base1);
+	--optional: var(--base01);
+	--cbg: var(--base03);
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bg: var(--base03);
+		--hl: var(--base02);
+		--primary: var(--base0);
+		--secondary: var(--base01);
+		--optional: var(--base1);
+		--cbg: var(--base3);
+	}
+}
+
+#color-mode:checked ~ * {
+	--bg: var(--base03);
+	--hl: var(--base02);
+	--primary: var(--base0);
+	--secondary: var(--base01);
+	--optional: var(--base1);
+	--cbg: var(--base3);
+}
+
+@media (prefers-color-scheme: dark) {
+	#color-mode:checked ~ * {
+		--bg: var(--base3);
+		--hl: var(--base2);
+		--primary: var(--base00);
+		--secondary: var(--base1);
+		--optional: var(--base01);
+		--cbg: var(--base03);
+	}
+}
+
+/*
+ * Dark.
+ * Background base03
+ * Highlight base02
+ * Primary base0
+ * Secondary base01
+ * Optional base1
+ */
+
+/*
+ * Light.
+ * Background base3
+ * Highlight base2
+ * Primary base00
+ * Secondary base1
+ * Optional base01
+ */
