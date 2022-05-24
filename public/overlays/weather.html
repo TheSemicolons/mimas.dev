@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
 <head>
-	<title>Overlay - Clock</title>
+	<title>Overlay - Weather</title>
 
 	<base href="https://mimas.dev/" target="_self">
 
@@ -30,68 +30,77 @@ body {
 	padding: 0;
 	width: 1920px;
 }
-.clock {
+.weather {
 	align-items: center;
 	background-color: rgba(0, 0, 0, 0);
 	display: flex;
 	flex-direction: column;
+	font-size: 1.2em;
 	justify-content: center;
+	left: 10px;
 	position: fixed;
-	right: 10px;
-}
-.time {
-	color: rgba(255, 255, 255, 1);
-	font-size: 4.0em;
-	font-weight: bold;
-}
-.date {
-	color: rgba(255, 255, 255, 1);
-	font-size: 2.0em;
-	font-weight: bold;
+	top: 4px;
 }
 	</style>
 </head>
 <body>
-	<div class="clock">
-		<div class="time">TIME</div>
-		<div class="date">DATE</div>
+	<div class="weather">
 	</div>
 	<script type="text/javascript">
-var time = document.querySelector('.time');
-var dateTime = document.querySelector('.date');
+let station;
+let theme;
+let styles;
 
-function updateClock() {
-// Get the current time, day , month and year
-	var now = new Date();
-	var hours = now.getHours();
-	var minutes = now.getMinutes();
-	var seconds = now.getSeconds();
-	var day = now.getDay();
-	var date = now.getDate();
-	var month = now.getMonth();
-	var year = now.getFullYear();
+const urlParams = new URLSearchParams(window.location.search);
 
-// store day and month name in an array
-	var dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-	var monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-
-// format date and time
-//	hours = hours % 12 || 12;
-	hours = hours < 10 ? '0' + hours : hours;
-	minutes = minutes < 10 ? '0' + minutes : minutes;
-	seconds = seconds < 10 ? '0' + seconds : seconds;
-	date = date < 10 ? '0' + date : date;
-
-// display date and time
-//	var period = hours < 12 ? 'AM' : 'PM';
-//	time.innerHTML = hours + ':' + minutes + ':' + seconds + ' ' + period;
-	time.innerHTML = hours + ':' + minutes + ':' + seconds;
-//	dateTime.innerHTML = dayNames[day] + ', ' + monthNames[month] + ' ' + date + ', ' + year;
-	dateTime.innerHTML = dayNames[day] + ', ' + date + ' ' + monthNames[month] + ' ' + year;
+if (urlParams.get('station')) {
+	station = urlParams.get('station').toUpperCase();
+} else {
+	station = 'KIAD';
 }
 
-updateClock();
-setInterval(updateClock, 1000);
+if (urlParams.get('theme')) {
+	theme = urlParams.get('theme').toLowerCase();
+} else {
+	theme = 'dark';
+}
+
+if (urlParams.get('theme') == 'dark') {
+	styles = `
+.weather {
+	color: rgba(0, 0, 0, 1);
+}`
+
+} else {
+	styles = `
+.weather {
+	color: rgba(255, 255, 255, 1);
+}`
+}
+
+var styleSheet = document.createElement("style")
+styleSheet.innerText = styles;
+document.head.appendChild(styleSheet);
+
+
+var weather = document.querySelector('.weather');
+var url = "https://mimas.dev/weather/" + station;
+
+function getWeather() {
+	var xhr = new XMLHttpRequest();
+	xhr.open("GET", url);
+	xhr.onreadystatechange = function () {
+		if (xhr.readyState === 4) {
+//			console.log(xhr.status);
+			weather.innerHTML = xhr.responseText;
+		}
+	};
+
+xhr.send();
+}
+
+getWeather();
+setInterval(getWeather, 300000); // 5 minutes
 	</script>
 </body>
 </html>

@@ -40,12 +40,12 @@ body {
 	right: 10px;
 }
 .time {
-	color: rgba(0, 0, 0, 1);
+	background-color: rgba(0, 0, 0, 0);
 	font-size: 4.0em;
 	font-weight: bold;
 }
 .date {
-	color: rgba(0, 0, 0, 1);
+	background-color: rgba(0, 0, 0, 0);
 	font-size: 2.0em;
 	font-weight: bold;
 }
@@ -57,6 +57,34 @@ body {
 		<div class="date">DATE</div>
 	</div>
 	<script type="text/javascript">
+let theme;
+let styles;
+
+const urlParams = new URLSearchParams(window.location.search);
+
+if (urlParams.get('theme')) {
+	theme = urlParams.get('theme').toLowerCase();
+} else {
+	theme = 'dark';
+}
+
+if (urlParams.get('theme') == 'dark') {
+	styles = `
+.clock {
+	color: rgba(0, 0, 0, 1);
+}`
+
+} else {
+	styles = `
+.clock {
+	color: rgba(255, 255, 255, 1);
+}`
+}
+
+var styleSheet = document.createElement("style")
+styleSheet.innerText = styles;
+document.head.appendChild(styleSheet);
+
 var time = document.querySelector('.time');
 var dateTime = document.querySelector('.date');
 
