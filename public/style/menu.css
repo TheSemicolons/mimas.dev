@@ -19,8 +19,8 @@ nav > ul > li
 nav > ul > li > a
 {
 	align-self: flex-start;
-	background-color: var(--bg); /* Primary Background */
-	color: var(--blue); /* Blue */
+	background-color: var(--bg);
+	color: var(--blue);
 	flex: 0 1 auto;
 	order: 0;
 	padding: 5px 10px;
@@ -30,7 +30,7 @@ nav > ul > li > a
 
 nav > ul > li > a:hover
 {
-	background-color: var(--blue); /* Blue */
-	color: var(--bg); /* Primary Background */
+	background-color: var(--blue);
+	color: var(--bg);
 	text-decoration: none;
 }
