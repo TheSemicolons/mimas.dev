@@ -32,7 +32,6 @@ body {
 }
 .clock {
 	align-items: center;
-	background-color: rgba(0, 0, 0, 0);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -68,15 +67,24 @@ if (urlParams.get('theme')) {
 	theme = 'dark';
 }
 
-if (urlParams.get('theme') == 'dark') {
+if (urlParams.get('theme') == 'overlay') {
 	styles = `
 .clock {
+	background-color: rgba(0, 0, 0, 0.5);
+	color: rgba(255, 255, 255, 1);
+}`
+
+} else if (urlParams.get('theme') == 'dark') {
+	styles = `
+.clock {
+	background-color: rgba(0, 0, 0, 0);
 	color: rgba(0, 0, 0, 1);
 }`
 
 } else {
 	styles = `
 .clock {
+	background-color: rgba(0, 0, 0, 0);
 	color: rgba(255, 255, 255, 1);
 }`
 }
