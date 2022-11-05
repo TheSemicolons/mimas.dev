@@ -1,7 +1,7 @@
 html, body
 {
 	background-color: var(--bg);
-	color: var(--primary);
+	color: var(--fg);
 }
 
 body
@@ -17,7 +17,7 @@ body
 a:active, a:link, a:visited
 {
 	background-color: inherit;
-	color: var(--blue);
+	color: var(--blue0);
 	font-weight: bold;
 	text-decoration: none;
 }
@@ -25,15 +25,15 @@ a:active, a:link, a:visited
 a:hover
 {
 	background-color: inherit;
-	color: var(--yellow);
+	color: var(--yellow0);
 	text-decoration: underline;
 }
 
 header
 {
 	align-self: stretch;
-	background-color: var(--hl);
-	color: var(--secondary);
+	background-color: var(--cbg);
+	color: var(--cfg);
 	flex: 0 1 auto;
 	order: 0;
 }
@@ -59,9 +59,9 @@ header > h2
 nav
 {
 	align-self: stretch;
-	background-color: var(--hl);
-	border-bottom: 1px solid var(--cbg);
-	color: var(--primary);
+	background-color: var(--cbg);
+	border-bottom: 1px solid var(--fg);
+	color: var(--cfg);
 	flex: 0 1 auto;
 	order: 1;
 }
@@ -78,9 +78,9 @@ main
 footer
 {
 	align-self: stretch;
-	background-color: var(--hl);
-	border-top: 1px solid var(--cbg);
-	color: var(--optional);
+	background-color: var(--cbg);
+	border-top: 1px solid var(--fg);
+	color: var(--cfg);
 	flex: 0 1 auto;
 	order: 3;
 }
@@ -114,7 +114,7 @@ footer > ul > li
 
 footer > ul > li+li
 {
-	border-left: 1px solid var(--optional);
+	border-left: 1px solid var(--fg);
 }
 
 
@@ -137,9 +137,9 @@ footer > ul > li+li
 .swatches > ul > li
 {
 	align-self: auto;
-	background-color: var(--hl);
-	border: 1px solid var(--cbg);
-	color: var(--primary);
+	background-color: var(--bg);
+	border: 1px solid var(--cfg);
+	color: var(--fg);
 	flex: 0 1 20%;
 	line-height: 25px;
 	margin: 25px;
@@ -150,52 +150,76 @@ footer > ul > li+li
 /**
  * Colours.
  */
-.blue
+.blue0
 {
 	background-color: inherit;
-	color: var(--blue);
+	color: var(--blue0);
 }
 
-.cyan
+.blue1
 {
 	background-color: inherit;
-	color: var(--cyan);
+	color: var(--blue1);
 }
 
-.green
+.cyan0
 {
 	background-color: inherit;
-	color: var(--green);
+	color: var(--cyan0);
 }
 
-.magenta
+.cyan1
 {
 	background-color: inherit;
-	color: var(--magenta);
+	color: var(--cyan1);
 }
 
-.orange
+.green0
 {
 	background-color: inherit;
-	color: var(--orange);
+	color: var(--green0);
 }
 
-.red
+.green1
 {
 	background-color: inherit;
-	color: var(--red);
+	color: var(--green1);
 }
 
-.violet
+.red0
 {
 	background-color: inherit;
-	color: var(--violet);
+	color: var(--red0);
 }
 
-.yellow
+.red1
 {
 	background-color: inherit;
-	color: var(--yellow);
+	color: var(--red1);
+}
+
+.violet0
+{
+	background-color: inherit;
+	color: var(--violet0);
+}
+
+.violet1
+{
+	background-color: inherit;
+	color: var(--violet1);
+}
+
+.yellow0
+{
+	background-color: inherit;
+	color: var(--yellow0);
+}
+
+.yellow1
+{
+	background-color: inherit;
+	color: var(--yellow1);
 }
 
 
@@ -225,58 +249,40 @@ footer > ul > li+li
 .caption
 {
 	background-color: inherit;
-	color: var(--secondary);
+	color: var(--cfg);
 	font-size: small;
 }
 
 .subdued
 {
 	background-color: inherit;
-	color: var(--secondary);
+	color: var(--cfg);
 }
 
 .error
 {
 	background-color: inherit;
-	color: var(--red);
+	color: var(--red0);
 }
 
 .success
 {
 	background-color: inherit;
-	color: var(--green);
+	color: var(--green0);
 }
 
 
 /**
  * Feature Box.
  */
-.featurebox > ul
+.featurebox > h2
 {
-	background-color: var(--hl);
-	border: 1px solid var(--cbg);
-	color: var(--primary);
-	list-style-type: none;
-	margin: 0 0 1.5em;
-	padding: 15px 20px 20px;
-}
-
-.featurebox > ul > li:first-child h3
-{
-	background-color: var(--hl);
-	border-bottom: 1px solid var(--red);
-	color: var(--red);
-	margin: 0 0 .3em;
-}
-
-.featurebox > ul > li > a
-{
+	background-color: var(--cbg);
+	border-bottom: 1px solid var(--red0);
+	color: var(--red0);
 	font-weight: bold;
-}
-
-.featurebox > ul > li:last-child
-{
-	margin: 0 0 1em;
+	margin: 0;
+	padding: 0;
 }
 
 
@@ -296,9 +302,9 @@ footer > ul > li+li
 {
 	align-content: center;
 	align-items: center;
-	background-color: var(--hl);
-	border: 1px solid var(--cbg);
-	color: var(--primary);
+	background-color: var(--cbg);
+	border: 1px solid var(--fg);
+	color: var(--cfg);
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -316,7 +322,7 @@ footer > ul > li+li
 
 .pagination > ul > li > a
 {
-	border: 1px solid var(--cbg);
+	border: 1px solid var(--fg);
 	margin: 5px;
 	padding: 2px 5px;
 	text-decoration: none;
@@ -325,21 +331,21 @@ footer > ul > li+li
 .pagination > ul > li > a:active, .pagination > ul > li > a:link,
 .pagination > ul > li > a:visited
 {
-	background-color: var(--bg);
-	color: var(--blue);
+	background-color: var(--cbg);
+	color: var(--blue0);
 }
 
 .pagination > ul > li > a:hover
 {
-	background-color: var(--blue);
-	color: var(--bg);
+	background-color: var(--blue0);
+	color: var(--cbg);
 }
 
 .pagination > ul > li > span
 {
 	background-color: var(--bg);
-	border: 1px solid var(--cbg);
-	color: var(--secondary);
+	border: 1px solid var(--cfg);
+	color: var(--fg);
 	font-weight: bold;
 	margin: 5px;
 	padding: 2px 5px;
@@ -352,9 +358,9 @@ footer > ul > li+li
  */
 article
 {
-	background-color: var(--hl);
-	border: 1px solid var(--cbg);
-	color: var(--primary);
+	background-color: var(--cbg);
+	border: 1px solid var(--fg);
+	color: var(--cfg);
 	margin: 1.0em 0;
 	padding: 15px;
 }
@@ -362,8 +368,8 @@ article
 article > h2
 {
 	background-color: inherit;
-	border-bottom: 1px solid var(--secondary);
-	color: var(--primary);
+	border-bottom: 1px solid var(--fg);
+	color: var(--fg);
 	font-weight: bold;
 	margin: 0;
 	padding: 0;
@@ -385,9 +391,9 @@ article > ul
 
 article > ul > li
 {
-	background-color: var(--hl);
+	background-color: var(--cbg);
 	border: none;
-	color: var(--primary);
+	color: var(--cfg);
 	font-weight: normal;
 	line-height: 1.3;
 	margin: 0 2em .3em;
@@ -397,7 +403,7 @@ article > ul > li
 {
 	align-content: flex-start;
 	align-items: flex-start;
-	border-top: 1px solid var(--secondary);
+	border-top: 1px solid var(--fg);
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -416,7 +422,7 @@ article > ul > li
 {
 	background-color: inherit;
 	border: none;
-	color: var(--secondary);
+	color: var(--cfg);
 	display: inline;
 	margin: 0;
 	list-style-type: none;
@@ -431,7 +437,7 @@ article > ul > li
 .postDetails > .tag > a
 {
 	background-color: inherit;
-	color: var(--blue);
+	color: var(--blue0);
 	padding: 0px 5px;
 	text-decoration: none;
 	white-space: nowrap;
@@ -443,7 +449,7 @@ article > ul > li
 .postDetails > .tag > a:hover
 {
 	background-color: inherit;
-	color: var(--yellow);
+	color: var(--yellow0);
 	text-decoration: underline;
 }
 
@@ -463,7 +469,7 @@ article > ul > li
 .tagList > ul > li > a
 {
 	background-color: inherit;
-	color: var(--blue);
+	color: var(--blue0);
 	padding: 0px 5px;
 	text-decoration: none;
 	white-space: nowrap;
@@ -475,7 +481,7 @@ article > ul > li
 .tagList > ul > li > a:hover
 {
 	background-color: inherit;
-	color: var(--yellow);
+	color: var(--yellow0);
 	text-decoration: underline;
 }
 
@@ -492,12 +498,12 @@ table
 
 table > thead > tr > th
 {
-	background-color: var(--hl);
-	border-bottom: 2px solid var(--cbg);
-	border-left: 1px solid var(--cbg);
-	border-right: 1px solid var(--cbg);
-	border-top: 2px solid var(--cbg);
-	color: var(--primary);
+	background-color: var(--cbg);
+	border-bottom: 2px solid var(--fg);
+	border-left: 1px solid var(--fg);
+	border-right: 1px solid var(--fg);
+	border-top: 2px solid var(--fg);
+	color: var(--cfg);
 	font-size: 1em;
 	font-weight: bold;
 	padding: 6px;
@@ -508,7 +514,7 @@ table > thead > tr > th
 table > tbody > tr > td
 {
 	background-color: var(--bg);
-	border: 1px solid var(--cbg);
+	border: 1px solid var(--cfg);
 	color: inherit;
 	padding: 3px;
 }
@@ -548,7 +554,7 @@ table > tbody > tr > td
 .submission > form
 {
 	background-color: var(--bg);
-	color: var(--primary);
+	color: var(--fg);
 	margin: 0 0 1.5em;
 	width: 500px;
 }
@@ -556,7 +562,7 @@ table > tbody > tr > td
 .submission > form em
 {
 	background-color: inherit;
-	color: var(--red);
+	color: var(--red0);
 	font-style: normal;
 	font-weight: bold;
 }
@@ -568,8 +574,8 @@ table > tbody > tr > td
 
 .submission > form > fieldset
 {
-	background-color: var(--hl);
-	border: 1px solid var(--cbg);
+	background-color: var(--cbg);
+	border: 1px solid var(--fg);
 	color: inherit;
 	margin-bottom: 10px;
 }
@@ -577,7 +583,7 @@ table > tbody > tr > td
 .submission > form > fieldset > legend
 {
 	background-color: transparent;
-	color: var(--red);
+	color: var(--red0);
 	font-weight: bold;
 	padding: 0 2px;
 }
@@ -597,13 +603,13 @@ table > tbody > tr > td
 
 .submission > form > fieldset > ul > li:not(:last-child)
 {
-	border-bottom: 1px solid var(--cbg);
+	border-bottom: 1px solid var(--cfg);
 }
 
 .submission > form > fieldset > ul > li > label
 {
 	background-color: inherit;
-	color: var(--primary);
+	color: var(--fg);
 	display: inline-block;
 	line-height: 1.8;
 	vertical-align: top;
