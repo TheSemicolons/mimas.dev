@@ -107,6 +107,7 @@ function updateClock() {
 	var date = now.getDate();
 	var month = now.getMonth();
 	var year = now.getFullYear();
+	var zone = now.toLocaleTimeString('en-us', {timeZoneName:'short'}).split(' ')[2];
 
 // store day and month name in an array
 	var dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
@@ -122,7 +123,7 @@ function updateClock() {
 // display date and time
 //	var period = hours < 12 ? 'AM' : 'PM';
 //	time.innerHTML = hours + ':' + minutes + ':' + seconds + ' ' + period;
-	time.innerHTML = hours + ':' + minutes + ':' + seconds;
+	time.innerHTML = hours + ':' + minutes + ':' + seconds + ' ' + zone;
 //	dateTime.innerHTML = dayNames[day] + ', ' + monthNames[month] + ' ' + date + ', ' + year;
 	dateTime.innerHTML = dayNames[day] + ', ' + date + ' ' + monthNames[month] + ' ' + year;
 }
