@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+	<title>Style Guide</title>
+
+	<meta charset="utf-8"/>
+
+	<meta property="og:url" content="http://www.thesemicolons.com/index.html"/>
+	<meta property="og:site_name" content="The Semicolons - Van's Aircraft RV-14"/>
+
+	<link rel="canonical" href="http://www.thesemicolons.com/guideStyle/"/>
+
+        <link rel="shortcut icon" href="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iNjRweCIgaGVpZ2h0PSI2NHB4IiB2aWV3Qm94PSIwIDAgNjQgNjQiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDY0IDY0IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxwb2x5Z29uIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwMDAwMCIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHBvaW50cz0iMzIsMSAyNiwxIDI2LDEwIDIwLDEyIDE0LDYgNiwxNCAxMiwyMCANCgkJMTAsMjYgMSwyNiAxLDM4IDEwLDM4IDEyLDQ0IDYsNTAgMTQsNTggMjAsNTIgMjYsNTQgMjYsNjMgMzIsNjMgMzgsNjMgMzgsNTQgNDQsNTIgNTAsNTggNTgsNTAgNTIsNDQgNTQsMzggNjMsMzggNjMsMjYgNTQsMjYgDQoJCTUyLDIwIDU4LDE0IDUwLDYgNDQsMTIgMzgsMTAgMzgsMSAJIi8+DQoJPGNpcmNsZSBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBjeD0iMzIiIGN5PSIzMiIgcj0iNiIvPg0KPC9nPg0KPC9zdmc+DQo=" />
+        <link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAmlJREFUeNrsW4GxgyAMrd4fwBE6yh+BETpCR+gIjtAROoIjdAT/Bm7gh/+hR61nkxCi0nCX0/aAvDyiRALVOI6H3KWqKpISi63Kja0+fHj5klQGHVGqx6gHSBFgR6hxshUjUvDUFGX20jnZAgnJeNwsABVbnIK7a+bF3TeAduO/KrAeUH0qnqc+iMbfJ/eNNAEpeNAEzChr5v6TIiAVD4qApY7fKbXFWLlSCfBtDRceNAGQDmfqBKOHyBAnA4KAl7aBDAKehkQA0sWnL6MX4JgX08R7hpl+MXiW66Z2MNOGbDSQDCyeRRtYjI/bchnNoQNiC2sobDscBL4nBu4OWb1gK0J+BEogIfkluGcS2KbBPZLAHgjtiYRsofBkLkZFdCuQEIImcAyCmQaNv942vMBzm2BlXRApkoBi3J/6GNQFjT7ZC0aEGIYROlpprfRRv73/2DkyfThhbAJXHBjAnQB6ToyPAZwAgWczNr6LvcmPWsdJAmLVKT8B3u0fy1wL9a5RvWNJBATDOkDd4AmtBAFSqbFvf20BdVv0XJ6SWHm4QcZUdEh2YpOjEpg0OSqk58ezbgAjY+I2pRAQorMzoO5ZOurUaVADIQ2FN/Ex1K7yMYSM5K47WA9AYa2Rb3Gzg6kdt3aRc8FxhdFHr1zVhLncFDP6yEDocwnw288u/me/pT2CE4y9/3kBY9TUmCZHNT2uGyRKM361PUISswO7Dt0mpxsldausbpbW7fJ6YOJzj8xU2JOj0SGlv5wfZO9uztQYBc9Te8rR2RCMQJXlzg1i8SQTUEJyVDo1ttkienZY8kywegCw/AowAAj86LlAmJO+AAAAAElFTkSuQmCC"/>
+
+	<link rel="stylesheet" type="text/css" href="/style/colour3.css"/>
+	<link rel="stylesheet" type="text/css" href="/style/reset.css"/>
+	<link rel="stylesheet" type="text/css" href="/style/main.css"/>
+	<link rel="stylesheet" type="text/css" href="/style/menu.css"/>
+</head>
+
+<body>
+	<header>
+		<h1>Page Title</h1>
+		<h2>Page Subtitle</h2>
+	</header>
+
+	<nav>
+		<ul>
+			<li><a href="#">Link 0</a></li>
+			<li><a href="#">Link 1</a></li>
+			<li><a href="#">Link 2</a></li>
+			<li><a href="#">Link 3</a></li>
+			<li><a href="#">Link 4</a></li>
+		</ul>
+	</nav>
+
+<main>
+	<section>
+		<h2>Menu Style</h2>
+		<nav>
+			<ul>
+				<li><a href="#">Menu Item</a></li>
+				<li><a href="#">Menu Item</a></li>
+				<li><a href="#">Menu Item</a></li>
+				<li><a href="#">Menu Item</a></li>
+				<li><a href="#">Menu Item</a></li>
+			</ul>
+		</nav>
+	</section>
+
+	<section><hr /></section>
+
+	<section class="swatches">
+		<h2>Colour Swatches - Main</h2>
+		<ul>
+			<li style="background-color:var(--bg);color:var(--fg);">Background 00</li>
+			<li style="background-color:var(--cbg);color:var(--cfg);">Background 08</li>
+		</ul>
+		<ul>
+			<li style="background-color:var(--fg);color:var(--bg);">Foreground 07</li>
+			<li style="background-color:var(--cfg);color:var(--cbg);">Foreground 15</li>
+		</ul>
+
+		<h2>Colour Swatches - Primary</h2>
+		<ul>
+			<li style="background-color:var(--blue0);color:#FFFFFF;">Blue 01</li>
+			<li style="background-color:var(--cyan0);color:#FFFFFF;">Cyan 02</li>
+			<li style="background-color:var(--green0);color:#FFFFFF;">Green 03</li>
+		</ul>
+		<ul>
+			<li style="background-color:var(--red0);color:#FFFFFF;">Red 04</li>
+			<li style="background-color:var(--violet0);color:#FFFFFF;">Violet 05</li>
+			<li style="background-color:var(--yellow0);color:#FFFFFF;">Yellow 06</li>
+		</ul>
+
+		<h2>Colour Swatches - Secondary</h2>
+		<ul>
+			<li style="background-color:var(--blue1);color:#FFFFFF;">Blue 09</li>
+			<li style="background-color:var(--cyan1);color:#FFFFFF;">Cyan 10</li>
+			<li style="background-color:var(--green1);color:#FFFFFF;">Green 11</li>
+		</ul>
+		<ul>
+			<li style="background-color:var(--red1);color:#FFFFFF;">Red 12</li>
+			<li style="background-color:var(--violet1);color:#FFFFFF;">Violet 13</li>
+			<li style="background-color:var(--yellow1);color:#FFFFFF;">Yellow 14</li>
+		</ul>
+	</section>
+
+	<section><hr /></section>
+
+	<section>
+		<h2>Typography</h2>
+		<ul>
+			<li style="font-family: monospace;">Text in Mono</li>
+			<li style="font-family: sans-serif;">Text in Sans</li>
+			<li style="font-family: serif;">Text in Serif</li>
+		</ul>
+	</section>
+
+	<section><hr /></section>
+
+	<section>
+		<h1>Heading 1</h1>
+		<h2>Heading 2</h2>
+		<h3>Heading 3</h3>
+		<h4>Heading 4</h4>
+		<h5>Heading 5</h5>
+		<h6>Heading 6</h6>
+	</section>
+
+	<section><hr /></section>
+
+	<section>
+		<h2>Paragraph Styles</h2>
+		<p>
+Paragraph, normal: Lorem ipsum dolor sit amet, consectetur adipiscing
+elit.  Pellentesque venenatis velit ante, et congue augue auctor in.
+Vivamus at semper lorem, a sollicitudin dolor. Sed interdum ac ligula at
+mollis. Mauris viverra, metus eu malesuada tempus, elit ex mattis nisi,
+ultricies venenatis diam nibh ut elit. Integer at volutpat turpis, eu
+lobortis mi. Duis at condimentum quam.  Morbi ac mi vel turpis egestas
+lobortis. Etiam vitae enim dictum, molestie felis porta, consectetur
+leo. Donec massa lorem, hendrerit sed aliquam eget, vestibulum sed
+purus.
+		</p>
+
+		<p class="subdued">
+Paragraph, subdued: Lorem ipsum dolor sit amet, consectetur adipiscing
+elit.  Pellentesque venenatis velit ante, et congue augue auctor in.
+Vivamus at semper lorem, a sollicitudin dolor. Sed interdum ac ligula at
+mollis. Mauris viverra, metus eu malesuada tempus, elit ex mattis nisi,
+ultricies venenatis diam nibh ut elit. Integer at volutpat turpis, eu
+lobortis mi. Duis at condimentum quam.  Morbi ac mi vel turpis egestas
+lobortis. Etiam vitae enim dictum, molestie felis porta, consectetur
+leo. Donec massa lorem, hendrerit sed aliquam eget, vestibulum sed
+purus.
+		</p>
+
+		<p class="small">
+Paragraph, small: Lorem ipsum dolor sit amet, consectetur adipiscing
+elit.  Pellentesque venenatis velit ante, et congue augue auctor in.
+Vivamus at semper lorem, a sollicitudin dolor. Sed interdum ac ligula at
+mollis. Mauris viverra, metus eu malesuada tempus, elit ex mattis nisi,
+ultricies venenatis diam nibh ut elit. Integer at volutpat turpis, eu
+lobortis mi. Duis at condimentum quam.  Morbi ac mi vel turpis egestas
+lobortis. Etiam vitae enim dictum, molestie felis porta, consectetur
+leo. Donec massa lorem, hendrerit sed aliquam eget, vestibulum sed
+purus.
+		</p>
+
+		<p class="caption">
+Paragraph, caption: Lorem ipsum dolor sit amet, consectetur adipiscing
+elit.  Pellentesque venenatis velit ante, et congue augue auctor in.
+Vivamus at semper lorem, a sollicitudin dolor. Sed interdum ac ligula at
+mollis. Mauris viverra, metus eu malesuada tempus, elit ex mattis nisi,
+ultricies venenatis diam nibh ut elit. Integer at volutpat turpis, eu
+lobortis mi. Duis at condimentum quam.  Morbi ac mi vel turpis egestas
+lobortis. Etiam vitae enim dictum, molestie felis porta, consectetur
+leo. Donec massa lorem, hendrerit sed aliquam eget, vestibulum sed
+purus.
+		</p>
+
+		<p class="italic">
+Paragraph, italic: Lorem ipsum dolor sit amet, consectetur adipiscing
+elit.  Pellentesque venenatis velit ante, et congue augue auctor in.
+Vivamus at semper lorem, a sollicitudin dolor. Sed interdum ac ligula at
+mollis. Mauris viverra, metus eu malesuada tempus, elit ex mattis nisi,
+ultricies venenatis diam nibh ut elit. Integer at volutpat turpis, eu
+lobortis mi. Duis at condimentum quam.  Morbi ac mi vel turpis egestas
+lobortis. Etiam vitae enim dictum, molestie felis porta, consectetur
+leo. Donec massa lorem, hendrerit sed aliquam eget, vestibulum sed
+purus.
+		</p>
+
+		<p class="bold">
+Paragraph, bold: Lorem ipsum dolor sit amet, consectetur adipiscing
+elit.  Pellentesque venenatis velit ante, et congue augue auctor in.
+Vivamus at semper lorem, a sollicitudin dolor. Sed interdum ac ligula at
+mollis. Mauris viverra, metus eu malesuada tempus, elit ex mattis nisi,
+ultricies venenatis diam nibh ut elit. Integer at volutpat turpis, eu
+lobortis mi. Duis at condimentum quam.  Morbi ac mi vel turpis egestas
+lobortis. Etiam vitae enim dictum, molestie felis porta, consectetur
+leo. Donec massa lorem, hendrerit sed aliquam eget, vestibulum sed
+purus.
+		</p>
+
+		<p class="success">
+Paragraph, success: Lorem ipsum dolor sit amet, consectetur adipiscing
+elit.  Pellentesque venenatis velit ante, et congue augue auctor in.
+Vivamus at semper lorem, a sollicitudin dolor. Sed interdum ac ligula at
+mollis. Mauris viverra, metus eu malesuada tempus, elit ex mattis nisi,
+ultricies venenatis diam nibh ut elit. Integer at volutpat turpis, eu
+lobortis mi. Duis at condimentum quam.  Morbi ac mi vel turpis egestas
+lobortis. Etiam vitae enim dictum, molestie felis porta, consectetur
+leo. Donec massa lorem, hendrerit sed aliquam eget, vestibulum sed
+purus.
+		</p>
+
+		<p class="error">
+Paragraph, error: Lorem ipsum dolor sit amet, consectetur adipiscing
+elit.  Pellentesque venenatis velit ante, et congue augue auctor in.
+Vivamus at semper lorem, a sollicitudin dolor. Sed interdum ac ligula at
+mollis. Mauris viverra, metus eu malesuada tempus, elit ex mattis nisi,
+ultricies venenatis diam nibh ut elit. Integer at volutpat turpis, eu
+lobortis mi. Duis at condimentum quam.  Morbi ac mi vel turpis egestas
+lobortis. Etiam vitae enim dictum, molestie felis porta, consectetur
+leo. Donec massa lorem, hendrerit sed aliquam eget, vestibulum sed
+purus.
+		</p>
+	</section>
+
+	<section><hr /></section>
+
+	<article>
+		<h2>Post List</h2>
+		<p>
+Pellentesque venenatis velit ante, et congue augue auctor in. Vivamus at
+semper lorem, a sollicitudin dolor. Sed interdum ac ligula at mollis.
+Mauris viverra, metus eu malesuada tempus, elit ex mattis nisi,
+ultricies venenatis diam nibh ut elit. Integer at volutpat turpis, eu
+lobortis mi. Duis at condimentum quam. Morbi ac mi vel turpis egestas
+lobortis. Etiam vitae enim dictum, molestie felis porta, consectetur
+leo. Donec massa lorem, hendrerit sed aliquam eget, vestibulum sed
+purus.
+		</p>
+		<p>
+			<a href="#">Read More...</a>
+		</p>
+		<ul class="postDetails">
+			<li>Tags:</li>
+			<li class="tag"><a href="#">Tag</a></li>
+			<li class="date">01 January 1970</li>
+		</ul>
+	</article>
+
+	<section><hr /></section>
+
+	<article class="featurebox">
+		<h2>Feature Box</h2>
+		<p>
+Maecenas id finibus est, non tincidunt felis. Integer vitae elit sed
+enim iaculis consequat sed a metus. Fusce elit eros, mattis dictum
+tempor ut, hendrerit in purus. Curabitur non nunc nibh. Aliquam erat
+volutpat. In eget lorem ultrices, blandit felis ut, scelerisque lacus.
+Praesent rhoncus odio et eros finibus consequat vel in dui. Fusce massa
+nunc, congue nec sapien vel, dictum tempor leo. Proin hendrerit interdum
+quam, a porta magna elementum vel.  Vestibulum ante ipsum primis in
+faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse id
+sollicitudin enim.
+		</p>
+	</article>
+
+	<section><hr /></section>
+
+	<section>
+		<h2>List Styles</h2>
+<p>The list below is not related to this paragraph.</p>
+		<ul>
+			<li><a href="#">A list of links</a></li>
+			<li><a href="#">A list of links</a></li>
+			<li><a href="#">A list of links</a></li>
+		</ul>
+
+<p>The list below is related to this paragraph.</p>
+		<ul class="related">
+			<li><a href="#">A list of related links</a></li>
+			<li><a href="#">A list of related links</a></li>
+			<li><a href="#">A list of related links</a></li>
+		</ul>
+			
+		<ul>
+			<li>An unordered list</li>
+			<li>An unordered list</li>
+			<li>An unordered list</li>
+		</ul>
+			
+		<ol>
+			<li>An ordered list</li>
+			<li>An ordered list</li>
+			<li>An ordered list</li>
+		</ol>
+	</section>
+
+	<section><hr /></section>
+
+	<section class="pagination">
+		<h2>Pagination</h2>
+
+		<ul>
+			<li><span>Previous</span></li>
+			<li><a href="#">1</a></li>
+			<li><a href="#">2</a></li>
+			<li><span>3</span></li>
+			<li><a href="#">4</a></li>
+			<li><a href="#">5</a></li>
+			<li><a href="#">Next</a></li>
+		</ul>
+	</section>
+
+	<section><hr /></section>
+
+	<section>
+		<h2>Table Style</h2>
+		<table class="data">
+			<thead>
+				<tr>
+					<th colspan="3">Table Heading</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<th>Column 0</th>
+					<th>Column 1</th>
+					<th>Column 2</th>
+				</tr>
+				<tr>
+					<td>654321</td>
+					<td>123456</td>
+					<td>15</td>
+				</tr>
+				<tr>
+					<td>987654</td>
+					<td>456789</td>
+					<td>59</td>
+				</tr>
+				<tr>
+					<td>321987</td>
+					<td>789123</td>
+					<td>91</td>
+				</tr>
+			</tbody>
+			</table>
+	</section>
+
+	<section><hr /></section>
+
+	<section>
+		<h2>Calendar Style</h2>
+		<table class="calendar data">
+			<thead>
+				<tr>
+					<th colspan="7">Month</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<th>S</th>
+					<th>M</th>
+					<th>T</th>
+					<th>W</th>
+					<th>T</th>
+					<th>F</th>
+					<th>S</th>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>2</td>
+					<td>3</td>
+					<td>4</td>
+					<td>5</td>
+					<td>6</td>
+					<td>7</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>2</td>
+					<td>3</td>
+					<td>4</td>
+					<td>5</td>
+					<td>6</td>
+					<td>7</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>2</td>
+					<td>3</td>
+					<td>4</td>
+					<td>5</td>
+					<td>6</td>
+					<td>7</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>2</td>
+					<td>3</td>
+					<td>4</td>
+					<td>5</td>
+					<td>6</td>
+					<td>7</td>
+				</tr>
+			</tbody>
+		</table>
+	</section>
+
+	<section><hr /></section>
+
+	<section class="submission">
+		<h2>Form Style</h2>
+		<form action="#">
+			<p><em>*</em> Indicates a required field.</p>
+			<fieldset>
+				<legend>Simple Controls</legend>
+				<ul>
+					<li><label for="text">Text <em>*</em></label> <input id="text" type="text" /></li>
+					<li><label for="search">Search <em>*</em></label> <input id="search" type="search" /></li>
+					<li><label for="tel">Telephone <em>*</em></label> <input id="tel" type="tel" /></li>
+					<li><label for="url">URL <em>*</em></label> <input id="url" type="url" /></li>
+					<li><label for="email">E-Mail <em>*</em></label> <input id="email" type="email" /></li>
+					<li><label for="password">Password <em>*</em></label> <input id="password" type="password" /></li>
+					<li><label for="checkbox"><input id="checkbox" type="checkbox" />Checkbox <em>*</em></label> </li>
+					<li><label for="radio"><input id="radio" type="radio" />Radio <em>*</em></label> </li>
+				</ul>
+			</fieldset>
+			<fieldset>
+				<legend>Date And Time Controls</legend>
+				<ul>
+					<li><label for="date">Date <em>*</em></label> <input id="date" type="date" /></li>
+					<li><label for="month">Month <em>*</em></label> <input id="month" type="month" /></li>
+					<li><label for="week">Week <em>*</em></label> <input id="week" type="week" /></li>
+					<li><label for="time">Time <em>*</em></label> <input id="time" type="time" /></li>
+					<li><label for="datetime-local">Date Time Local <em>*</em></label> <input id="datetime-local" type="datetime-local" /></li>
+				</ul>
+			</fieldset>
+			<fieldset>
+				<legend>Complex Controls</legend>
+				<ul>
+					<li><label for="number">Number <em>*</em></label> <input id="number" type="number" /></li>
+					<li><label for="range">Range <em>*</em></label> <input id="range" type="range" /></li>
+					<li><label for="color">Color <em>*</em></label> <input id="color" type="color" /></li>
+				</ul>
+			</fieldset>
+			<fieldset>
+				<legend>Button Controls</legend>
+				<ul>
+					<li><label for="file">File <em>*</em></label> <input id="file" type="file" /></li>
+					<li><label for="image">Image <em>*</em></label> <input id="image" type="image" alt="Image" src="/image/lipsum.gif" /></li>
+					<li><label for="submit"> <em>*</em></label> <input id="submit" type="submit" /></li>
+					<li><label for="reset"> <em>*</em></label> <input id="reset" type="reset" /></li>
+					<li><label for="button"> <em>*</em></label> <input id="button" type="button" value="Button"/></li>
+				</ul>
+			</fieldset>
+			<fieldset>
+				<legend>Additional Controls</legend>
+				<ul>
+					<li><label for="sselect">Single Select <em>*</em></label><select id="sselect"><option value="0">0</option><option value="1">1</option></select></li>
+					<li><label for="mselect">Multiple Select <em>*</em></label><select id="mselect" multiple=""><option value="0">0</option><option value="1">1</option></select></li>
+					<li><label for="textarea">Textarea <em>*</em></label><textarea id="textarea"></textarea></li>
+					<li><label>Progress</label><progress id="progress" value="25" max="100"></progress></li>
+					<li><label>Meter</label><meter value="6" min="0" max="8"></meter></li>
+				</ul>
+			</fieldset>
+		</form>
+	</section>
+</main>
+
+	<footer>
+		<p>&#169; 2020 Style Guide</p>
+		<ul>
+			<li><a href="#">License Agreement</a></li>
+			<li><a href="#">Privacy Policy</a></li>
+		</ul>
+	</footer>
+</body>
+</html>
