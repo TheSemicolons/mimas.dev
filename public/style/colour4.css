@@ -40,17 +40,17 @@
 
 @media (prefers-color-scheme: dark) {
 	:root {
-		--bg: var(--base07);
+		--bg: var(--base15);
 		--fg: var(--base00);
-		--cbg: var(--base15);
+		--cbg: var(--base07);
 		--cfg: var(--base08);
 	}
 }
 
 #color-mode:checked ~ * {
-	--bg: var(--base07);
+	--bg: var(--base15);
 	--fg: var(--base00);
-	--cbg: var(--base15);
+	--cbg: var(--base07);
 	--cfg: var(--base08);
 }
 
